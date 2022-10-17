@@ -1,0 +1,136 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 40px;
+  box-shadow: 0 3px 5px #88888833;
+  transition: all 0.5s;
+}
+
+nav.dark {
+  background-color: #21222A;
+}
+
+.nav--logo {
+  display: flex;
+  align-items: center;
+}
+
+.nav--logo-img {
+  width: 40px;
+  margin-right: 10px;
+}
+
+.nav--logo-text {
+  color: #61DAFB;
+}
+
+.toggler {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.toggler--dark {
+  color: rgb(165, 165, 165);
+}
+
+nav.dark .toggler--dark {
+  color: #fff;
+}
+
+nav.dark .toggler--light {
+  color: rgb(165, 165, 165);
+}
+
+.toggler--slider {
+  width: 30px;
+  background-color: black;
+  margin: 0 8px;
+  border-radius: 30px;
+  padding: 2px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+nav.dark .toggler--slider {
+  background-color: #fff;
+}
+
+.toggler--slider--circle {
+  width: 14px;
+  height: 14px;
+  background-color: #fff;
+  border-radius: 58%;
+  z-index: 100;
+  transition: all 0.5s;
+}
+
+nav.dark .toggler--slider--circle {
+  background-color: black;
+  float: right;
+}
+
+main {
+  padding: 0px 40px;
+  color: #282D35;
+  flex: 1 1;
+  transition: all 0.5s;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+ul {
+  font-size: 1.2em;
+  list-style: none;
+  padding-left: 1em;
+  max-width: 450px;
+}
+
+ul li::before {
+  content: "\2022";
+  color: #61DAFB;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  font-size: 1.2em;
+}
+
+main.dark {
+  background-color: #282D35;
+  color: #fff;
+}
+
+.main--logo-bg {
+  position: fixed;
+  opacity: 0.1;
+  right: -250px;
+  top: 180px;
+  z-index: 0;
+}
+
+main.dark .main--logo-bg  {
+  opacity: 0.05;
+}
